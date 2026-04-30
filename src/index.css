@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-gold: #c5a059;
+  --color-gold-hover: #d4b57a;
+  --color-deep-black: #0a0a0a;
+  --color-soft-black: #111111;
+  --color-muted-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  :root {
+    --background: oklch(0.1 0 0);
+    --foreground: oklch(0.95 0 0);
+    
+    --card: oklch(0.12 0 0);
+    --card-foreground: oklch(0.95 0 0);
+    
+    --popover: oklch(0.12 0 0);
+    --popover-foreground: oklch(0.95 0 0);
+    
+    --primary: oklch(0.7 0.1 80); /* Gold-ish */
+    --primary-foreground: oklch(0.1 0 0);
+    
+    --secondary: oklch(0.2 0 0);
+    --secondary-foreground: oklch(0.95 0 0);
+    
+    --muted: oklch(0.15 0 0);
+    --muted-foreground: oklch(0.6 0 0);
+    
+    --accent: oklch(0.2 0 0);
+    --accent-foreground: oklch(0.95 0 0);
+    
+    --destructive: oklch(0.6 0.2 25);
+    --destructive-foreground: oklch(0.95 0 0);
+    
+    --border: oklch(0.2 0 0);
+    --input: oklch(0.2 0 0);
+    --ring: oklch(0.7 0.1 80);
+    
+    --radius: 0rem;
+    --radius-lg: 0rem;
+    --radius-md: 0rem;
+    --radius-sm: 0rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: var(--ring);
+  }
+  body {
+    @apply bg-deep-black text-white selection:bg-gold selection:text-black font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
